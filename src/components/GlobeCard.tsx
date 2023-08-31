@@ -8,7 +8,7 @@ import GlobeVariantToggle from "./GlobeVariantToggle";
 const GlobeCard = () => {
   const { cityValue, country, cityWeatherData, globeVariant } = useWeather()
   // @ts-expect-error globe-ref-error
-  const globeRef = useRef<MutableRefObject<>>(null)
+  const globeRef = useRef<MutableRefObject>(null)
   const [globeData, setGlobeData] = useState<globeDataType[]>([]);
 
   useEffect(() => {
@@ -18,7 +18,6 @@ const GlobeCard = () => {
       globeRef.current.controls().autoRotate = true;
       globeRef.current.controls().autoRotateSpeed = 0.1;
     }
-
   }, [cityWeatherData]);
 
   useEffect(() => {
