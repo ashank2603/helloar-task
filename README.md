@@ -1,4 +1,4 @@
-# HelloAR Task
+# ThreeJS Weather App
 
 How to run:
 
